@@ -21,24 +21,3 @@ jobs:
         with:
           name: JustMusic
           path: app/build/outputs/apk/debug/app-debug.apk
-
-  firebase-deploy:
-    name: Deploy to Firebase App Distribution
-    needs: [ generate-apk ]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v1
-
-      - name: Download APK from build
-        uses: actions/download-artifact@v1
-        with:
-          name: JustMusic
-
-      - name: Upload Artifact to Firebase App Distribution
-        uses: wzieba/Firebase-Distribution-Github-Action@v1.3.5
-        with:
-          appId: ${{secrets.FIREBASE_APP_ID}}
-          token: ${{secrets.FIREBASE_TOKEN}}
-          groups: testers
-          file: JustMusic/app-debug.apk
