@@ -2,7 +2,7 @@
 ### Just Music - Project Code Understanding
 
 This is a Just Music app for Listening Music with great features.
-By interacting with this app you can browse the latest albums,songs and many more…
+By interacting with this app you can browse the latest albums,songs and many more
 
 **Architecture and Pattern**
 - Clean Architecture
