@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.cardview.CircularRevealCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/_5sdp"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:contentPadding="@dimen/_5sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewForCoverImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:elevation="@dimen/_8sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewSong"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txSongTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            style="@style/JustMusic.SongTitle"
+            app:layout_constraintStart_toEndOf="@id/cardViewForCoverImage"
+            app:layout_constraintEnd_toStartOf="@id/imageViewMoreOptions"
+            app:layout_constraintTop_toTopOf="@id/cardViewForCoverImage"
+            app:layout_constraintBottom_toTopOf="@id/txSongArtist"
+            tools:text="Song title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txSongArtist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            style="@style/JustMusic.SongSubTitle"
+            app:layout_constraintBottom_toBottomOf="@id/cardViewForCoverImage"
+            app:layout_constraintEnd_toStartOf="@id/imageViewMoreOptions"
+            app:layout_constraintStart_toEndOf="@id/cardViewForCoverImage"
+            app:layout_constraintTop_toBottomOf="@id/txSongTitle"
+            tools:text="Song subtitle" />
+
+        <ImageView
+            android:id="@+id/imageViewMoreOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_more_options"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.circularreveal.cardview.CircularRevealCardView>

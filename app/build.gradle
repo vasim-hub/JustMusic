@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
+    id 'com.diffplug.spotless' version '5.0.0'
+}
+
+Properties localProperties = new Properties()
+localProperties.load(project.rootProject.file('gradle.properties').newDataInputStream())
+
+apply from: '../dependecies.gradle'
+apply from: '../spotless.gradle/'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.justmusic"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+            manifestPlaceholders["appName"] = "Just Music Debug"
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources false
+            manifestPlaceholders["appName"] = "Just Music"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    /**
+     * This task is used to generate apk name based on variants configured
+     */
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = localProperties.getProperty('APP_NAME_FOR_APK')
+            outputFileName += "-v" + android.defaultConfig.versionName
+            if (variant.buildType.name == "release") {
+                outputFileName += ".apk"
+            } else {
+                outputFileName += "-Assigment.apk"
+            }
+        }
+    }
+
+    testOptions {
+        unitTests.includeAndroidResources true
+    }
+}
+
+dependencies {
+    api project(':domain')
+    api project(':data:repository')
+    api project(':shared')
+
+    api appDependencies.kotlin
+    api appDependencies.androidCore
+
+    api appDependencies.appCompat
+    api appDependencies.material
+    api appDependencies.constraintLayout
+    api appDependencies.swiperefreshlayout
+
+    api appDependencies.viewModel
+    api appDependencies.lifecycleRuntime
+
+    api appDependencies.coroutinesAndroid
+
+    api appDependencies.navFragment
+    api appDependencies.navUi
+
+    api appDependencies.coin
+
+    api appDependencies.shimmer
+
+    api appDependencies.sdp
+    api appDependencies.ssp
+
+    api appDependencies.expoPlayer
+    api appDependencies.androidXMedia
+
+    // Hilt Dagger
+    api "com.google.dagger:hilt-android:2.45"
+    kapt "com.google.dagger:hilt-android-compiler:2.45"
+    kapt appDependencies.kaptCompiler
+}

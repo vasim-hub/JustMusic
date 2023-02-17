@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.justmusic.utils.customviews.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:background="@android:color/white"
+    android:paddingBottom="@dimen/_10sdp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardViewForCoverImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/imageViewSong"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_100sdp"
+                android:adjustViewBounds="true"
+                android:background="@color/shimmerColor"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@color/shimmerColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txAlbumTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txAlbumTitle"
+                style="@style/JustMusic.AlbumTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/shimmerColor"
+                android:gravity="start"
+                app:layout_constraintEnd_toStartOf="@id/imageViewFavorite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewSong"
+                tools:text="Song titleS" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txAlbumArtist"
+                style="@style/JustMusic.AlbumSubTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/shimmerColor"
+                android:gravity="start"
+                app:layout_constraintEnd_toStartOf="@id/imageViewFavorite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txAlbumTitle"
+                tools:text="Song title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</com.justmusic.utils.customviews.SquareRelativeLayout>

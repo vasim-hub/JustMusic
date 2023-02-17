@@ -1,0 +1,8 @@
+include ':app'
+rootProject.name = "JustMusic"
+include ':domain'
+include ':data'
+include ':data:cache'
+include ':data:network'
+include ':data:repository'
+include ':shared'

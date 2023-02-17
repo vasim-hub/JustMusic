@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+
+}
+
+Properties localProperties = new Properties()
+localProperties.load(project.rootProject.file('gradle.properties').newDataInputStream())
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "HOST_URL", localProperties.getProperty('DEV_JUSTMUSIC_SERVER_URL'))
+        }
+        release {
+            minifyEnabled false
+            buildConfigField("String", "HOST_URL", localProperties.getProperty('PRO_JUSTMUSIC_SERVER_URL'))
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    api project(":domain")
+    api project(":shared")
+
+    implementation appDependencies.kotlin
+    implementation appDependencies.androidCore
+
+    //Retrofit Networking
+    api dataDependencies.retrofit
+    api dataDependencies.okhttp
+    api dataDependencies.loggingIntercepter
+
+    api dataDependencies.moshiConverter
+    api dataDependencies.moshi
+    api dataDependencies.moshiKotlin
+    kapt dataDependencies.moshiKotlinKept
+
+    // Hilt Dagger
+    api appDependencies.hiltAndroid
+    kapt appDependencies.kaptHiltAndroidCompiler
+    kapt appDependencies.kaptCompiler
+
+    // Testing
+    testImplementation testDependencies.jUnit
+    testImplementation testDependencies.mockWebServer
+    testImplementation testDependencies.testKotlinCoroutines
+    testImplementation testDependencies.googleTruth
+    testImplementation testDependencies.mokitoCore
+}

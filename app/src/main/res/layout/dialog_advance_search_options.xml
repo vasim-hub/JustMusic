@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txAdvanceSearch"
+        style="@style/JustMusic.AlbumSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="start"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/advance_search"
+        android:fontFamily="@string/roboto_medium"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txTypeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintTop_toBottomOf="@id/txAdvanceSearch"
+        android:text="@string/by_category"
+        style="@style/JustMusic.SearchTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Spinner
+        android:id="@+id/spinnerType"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/txTypeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txTypeTitle"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txArtist"
+        style="@style/JustMusic.SearchTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/txTypeTitle"
+        android:text="@string/by_artist"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Spinner
+        android:id="@+id/spinnerArtist"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/txArtist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txArtist"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txReleaseDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/txArtist"
+        android:text="@string/released_timeline"
+        android:lines="2"
+        style="@style/JustMusic.SearchTitle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerReleaseDuration"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/txReleaseDuration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txReleaseDuration"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        app:layout_constraintGuide_percent="0.28"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:alpha=".2"
+        app:layout_constraintTop_toBottomOf="@id/txReleaseDuration"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:background="@color/color_757575"
+        app:layout_constraintBottom_toTopOf="@id/txApplySearch"
+        android:layout_height=".5dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txReset"
+        style="@style/JustMusic.SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider"
+        android:layout_marginStart="@dimen/_10sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txCancel"
+        style="@style/JustMusic.SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toStartOf="@id/txApplySearch"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txApplySearch"
+        style="@style/JustMusic.SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/apply"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider"
+        android:layout_marginEnd="@dimen/_20sdp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

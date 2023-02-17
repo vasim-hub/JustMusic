@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.cardview.CircularRevealCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/_5sdp"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:contentPadding="@dimen/_5sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewSong"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:scaleType="centerCrop"
+            android:background="@color/shimmerColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@color/shimmerColor"
+            app:layout_constraintStart_toEndOf="@id/imageViewSong"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txSubTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Song title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txSubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/shimmerColor"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            app:layout_constraintEnd_toEndOf="@id/txTitle"
+            app:layout_constraintStart_toStartOf="@id/txTitle"
+            app:layout_constraintTop_toBottomOf="@id/txTitle"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewSong"
+            tools:text="Song subtitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.circularreveal.cardview.CircularRevealCardView>

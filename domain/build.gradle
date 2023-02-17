@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+apply from: '../dependecies.gradle'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    api project(':shared')
+    implementation domainDependencies.kotlin
+    implementation domainDependencies.coroutinesCore
+    implementation domainDependencies.javaInject
+}

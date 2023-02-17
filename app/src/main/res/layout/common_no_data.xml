@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/clNoData"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewNoDataMessage"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:gravity="center"
+        android:alpha=".4"
+        android:src="@drawable/ic_add" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txNoDataShortMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_757575"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:fontFamily="@string/roboto_medium"
+        android:gravity="center"
+        android:textSize="@dimen/_18sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txNoDataLongMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_757575"
+        app:fontFamily="@string/roboto_regular"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp" />
+</LinearLayout>

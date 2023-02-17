@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/clNoInternet"
+    android:visibility="gone"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txNoInternetTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color5e50b5"
+        app:fontFamily="@string/roboto_medium"
+        android:gravity="center"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:text="@string/no_internet"
+        tools:text="@string/no_internet" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        app:fontFamily="@string/roboto_regular"
+        android:gravity="center"
+        android:backgroundTint="@color/color5e50b5"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="@string/retry"
+        tools:text="@string/retry" />
+</LinearLayout>

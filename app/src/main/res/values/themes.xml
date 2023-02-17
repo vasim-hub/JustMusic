@@ -1,0 +1,99 @@
+<resources>
+    <style name="Theme.JustMusic" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondary</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/colorStatusBar</item>
+        <item name="android:windowBackground">@drawable/splash_image</item>
+    </style>
+
+    <style name="Theme.MusicPlayer.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="JustMusic.Title" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:fontFamily">@string/roboto_medium</item>
+    </style>
+
+    <style name="JustMusic.Description" parent="JustMusic.Title">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@string/roboto_regular</item>
+    </style>
+
+    <style name="JustMusic.ToolbarTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/_17ssp</item>
+        <item name="android:fontFamily">@string/roboto_medium</item>
+    </style>
+
+    <style name="JustMusic.AlbumTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/color_635151</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@string/roboto_medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="JustMusic.AlbumSubTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@string/roboto_regular</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="JustMusic.SongTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/color_635151</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@string/roboto_medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="JustMusic.SongSubTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@string/roboto_regular</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="JustMusic.SongDurationTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/color5e50b5</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@string/roboto_medium</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="JustMusic.SearchTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@string/roboto_regular</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">start</item>
+    </style>
+
+    <style name="JustMusic.SearchButton" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@string/roboto_medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginBottom">@dimen/_30sdp</item>
+        <item name="android:paddingTop">@dimen/_20sdp</item>
+        <item name="android:paddingBottom">@dimen/_20sdp</item>
+
+    </style>
+</resources>

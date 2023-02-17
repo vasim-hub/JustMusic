@@ -1,0 +1,43 @@
+apply from: 'dependecies.gradle'
+
+buildscript {
+    ext {
+        kotlin_version = "1.7.0"
+        nav_version = "2.5.0"
+        hilt_version = "2.42"
+        android_tools_build = '7.4.1'
+        spotless_version = '5.10.1'
+
+        //Versioning
+        compileSdkVersion = 32
+        minSdkVersion = 21
+        targetSdkVersion = 32
+        versionCode = 1
+        versionName = "1.0.0"
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$android_tools_build"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

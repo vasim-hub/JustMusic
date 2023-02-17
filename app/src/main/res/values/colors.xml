@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5e50b5</color>
+    <color name="colorPrimaryDark">#5e50b5</color>
+    <color name="colorStatusBar">#5e50b5</color>
+    <color name="colorSecondary">#5e50b5</color>
+
+    <color name="color5e50b5">#5e50b5</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="color_f3e4e4">#F3E4E4</color>
+    <color name="color_635151">#635151</color>
+    <color name="shimmerColor">#C2C2C2</color>
+    <color name="color_dadada">#dadada</color>
+    <color name="color_757575">#757575</color>
+
+    <color name="colorLargePlayerScreen">#F44336</color>
+</resources>
