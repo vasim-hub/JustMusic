@@ -41,7 +41,7 @@ fun TextView.makeSearchHighLight(content: String) {
     }
     val spannableText: Spannable = SpannableString(content)
     spannableText.setSpan(
-        ForegroundColorSpan(ContextCompat.getColor(this.context,R.color.colorPrimary)),
+        ForegroundColorSpan(ContextCompat.getColor(this.context, R.color.colorPrimary)),
         0,
         SearchFragment.searchText.length,
         Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
