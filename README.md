@@ -26,8 +26,8 @@ Components of data layer include:
 
 - **Models**
 
-  -** Dto Models**: Defines POJO of network responses.
-  -** Entity Models**: Defines the schema of SQLite database by using Room.
+  - **Dto Models**: Defines POJO of network responses.
+  - **Entity Models**: Defines the schema of SQLite database by using Room.
 
 - **Repositories**: Responsible for exposing data to the domain layer.
 - **Mappers**: They perform data transformation between domain, dto and entity models.
