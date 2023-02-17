@@ -34,8 +34,8 @@ import com.justmusic.shared.AppConstants.ADVANCE_SEARCH_ANY_TIME_YEARS_BACK_FROM
 import com.justmusic.shared.model.AdvanceSearchData
 import com.justmusic.shared.model.AdvanceSearchParamTypesData
 import java.text.SimpleDateFormat
-import java.util.*
-
+import java.util.Calendar
+import java.util.Locale
 /**
  * This is a Advance search dialog which required to Set data in dialog,open or hide operation.
  * Data will display based on Album or Song type
