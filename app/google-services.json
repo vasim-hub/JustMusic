@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "694825176358",
+    "project_id": "justmusic-915e9",
+    "storage_bucket": "justmusic-915e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694825176358:android:6624016138e826db6ec5e7",
+        "android_client_info": {
+          "package_name": "com.justmusic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694825176358-qprgh6gn26jddb8fr5pktcanche5lg2r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.justmusic",
+            "certificate_hash": "f1290627c8464b6fb4c9d1ca1e8ac4ea60a12788"
+          }
+        },
+        {
+          "client_id": "694825176358-238fqlgh1pntg6ea2kko2np029bqh7jj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBo5w2Yx9GqsOnS1n7Q3QTnckTos_whio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694825176358-238fqlgh1pntg6ea2kko2np029bqh7jj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
